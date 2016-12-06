@@ -7,7 +7,8 @@ Alexis Gatignol
 Qizhou Xing
 Yohan Grember
 
-Monitoring Professor:
+Professor:
 Matthieu Geist
 
 
+AJOUT 

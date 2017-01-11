@@ -148,7 +148,7 @@ def main(_):
   train_step = tf.train.AdamOptimizer(LEARNING_RATE).minimize(svm_loss)
 
   sess = tf.InteractiveSession()
-  tf.initialize_all_variables().run()
+  tf.global_variables_initializer().run()
 
   tps1 = time.clock() 
 

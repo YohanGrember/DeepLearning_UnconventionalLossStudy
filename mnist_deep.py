@@ -167,7 +167,7 @@ def main(_):
   sess = tf.InteractiveSession()
   tf.global_variables_initializer().run()
 
-  tps1 = time.clock() 
+  tps1 = time.time()
 
   #TRAIN
   for k in range(ITERATION):
@@ -184,7 +184,10 @@ def main(_):
      # print("norm of weights %g" %(weights_norm))
     sess.run(train_step,feed_dict={x: batch[0], y_: batch[1], keep_prob: .5})
 
-  tps2 = time.clock() 
+    print("step 3000, learning_rate %g, training accuracy %g" % (learning_rate.eval(), train_accuracy))
+    print("nombre d'epochs utilisés %d" % mnist.train._epochs_completed)
+
+  tps2 = time.time()
   print("weights = ")
   print(sess.run(W_fc2))
   print("biais = ")

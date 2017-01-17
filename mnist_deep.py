@@ -184,7 +184,7 @@ def main(_):
      # print("norm of weights %g" %(weights_norm))
     sess.run(train_step,feed_dict={x: batch[0], y_: batch[1], keep_prob: .5})
 
-    print("step 3000, learning_rate %g, training accuracy %g" % (learning_rate.eval(), train_accuracy))
+    print("step %d, learning_rate %g, training accuracy %g" % (ITERATION,learning_rate.eval(), train_accuracy))
     print("nombre d'epochs utilisés %d" % mnist.train._epochs_completed)
 
   tps2 = time.time()

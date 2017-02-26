@@ -1,0 +1,3 @@
+la boucle principale pour le training se trouve dans cifar10_train.py
+le calcul de la perte se trouve dans cifar10.py
+l'implémentation des loss dans loss_functions.py

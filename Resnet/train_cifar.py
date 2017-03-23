@@ -318,7 +318,7 @@ if __name__ == '__main__':
     parser.add_argument('-export_file','--export_file', type=str, default='test.csv',
                          help='name of the csv export file')
     #parser.add_argument('-data','--dataset',type=str,default='mnist',help='dataset : mnist / cifar10 / icml')
-    parser.add_argument('-loss','--loss',type=str,default='cross_entropy',help='loss function : entropy / hinge / crammer / lee / surrogate / GEL / GLL / large-margin entropy')
+    parser.add_argument('-loss','--loss',type=str,default='cross_entropy',help='loss function : cross_entropy / weston / crammer / lee / surrogate_hinge / surrogate_hinge_squares / surrogate_squares / surrogate_exponential / surrogate_sigmoid / surrogate_logistic / surrogate_saturated_hinge / GEL / GLL / large_margin')
     parser.add_argument('-batch_size','--batch_size',type=int,default=128,help='batch size')
     parser.add_argument('-max_steps','--max_steps',type=int,default=200000,help='nombre diterations')
     parser.add_argument('-num_blocks','--num_blocks',type=int,default=3,help='6n+2 total weight layers will be used. num_blocks = 3 : ResNet-20. num_blocks = 5 : ResNet-32. num_blocks = 8 : ResNet-50. num_blocks = 18 : ResNet-110')

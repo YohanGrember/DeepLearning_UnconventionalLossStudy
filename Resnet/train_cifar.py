@@ -323,7 +323,7 @@ if __name__ == '__main__':
     parser.add_argument('-max_steps','--max_steps',type=int,default=200000,help='nombre diterations')
     parser.add_argument('-num_blocks','--num_blocks',type=int,default=3,help='6n+2 total weight layers will be used. num_blocks = 3 : ResNet-20. num_blocks = 5 : ResNet-32. num_blocks = 8 : ResNet-50. num_blocks = 18 : ResNet-110')
     #parser.add_argument('-lambda','--lamb',type=float,default=0.5,help='lambda coeff for regularisation')
-    parser.add_argument('-learn_rate','--learning_rate',type=float,default=1e-2,help='learning rate for gradient descent')
+    parser.add_argument('-learn_rate','--learning_rate',type=float,default=3e-4,help='learning rate for gradient descent')
     parser.add_argument('-m','--m',type=int,default=2,help='margin coefficient for Large Margin Softmax Loss')
     parser.add_argument('-load','--load',type=bool,default=False, help='Initialize the network from a checkpoint ?')
     parser.add_argument('-load_dir','--load_dir',type=str,default='./checkpoint_to_load',help='Directory from which to load the network')

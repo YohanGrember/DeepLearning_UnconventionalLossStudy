@@ -4,7 +4,7 @@ Study of Unconventional Loss applied to Deep Learning.
 Project monitored by both CentraleSupélec and LORIA.
 
 Students involved:
-Algat
+Alexis Gatignol
 Qizhou Xing
 Yohan Grember
 

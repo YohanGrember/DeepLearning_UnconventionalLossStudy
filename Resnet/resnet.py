@@ -160,7 +160,7 @@ def loss(logits, labels, basic_logits, last_layer_weights, last_layer_biases):
     if FLAGS.loss=='cross_entropy':
         cross_entropy=tf.nn.sparse_softmax_cross_entropy_with_logits(labels=labels,logits= logits,  name='cross_entropy_per_example')
         loss_mean= tf.reduce_mean(cross_entropy, name='cross_entropy')
-    elif FLAGS.loss=='hinge':
+    elif FLAGS.loss=='weston':
         loss_mean = multiclasshingeloss(logits, labels2,FLAGS.batch_size)
     elif FLAGS.loss=='crammer':
         loss_mean=multiclasscrammerloss(logits, labels2,FLAGS.batch_size) 
@@ -179,7 +179,7 @@ def loss(logits, labels, basic_logits, last_layer_weights, last_layer_biases):
     elif FLAGS.loss == 'surrogate_logistic':
         loss_mean = surrogate_logistic(logits, labels2,FLAGS.batch_size) 
     elif FLAGS.loss == 'surrogate_double_hinge': # very bad results
-        loss_mean = surrogate_double_hinge(logits, labels2,FLAGS.batch_size) 
+        loss_mean = surrogate_saturated_hinge(logits, labels2,FLAGS.batch_size) 
     elif FLAGS.loss == 'GEL':
         loss_mean = GEL(logits, labels2,FLAGS.batch_size)
     elif FLAGS.loss == 'GLL':
